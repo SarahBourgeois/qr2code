@@ -133,5 +133,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Created by XyDisorder - xydisorder@gmail.com
 
-Project Link: [https://github.com/XyDisorder/qr2code](https://github.com/XyDisorder/qr2code)
+Project Link: [https://github.com/XyDisorder/qr2code](https://github.comXyDisorder/qr2code)
 

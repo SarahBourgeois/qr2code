@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Fond sombre -->
+  <rect width="32" height="32" rx="4" fill="#121212"/>
+  
+  <!-- Grille tech en arrière-plan -->
+  <pattern id="grid" width="4" height="4" patternUnits="userSpaceOnUse">
+    <path d="M 4 0 L 0 0 0 4" fill="none" stroke="#222222" stroke-width="0.5"/>
+  </pattern>
+  <rect width="32" height="32" rx="4" fill="url(#grid)" opacity="0.3"/>
+  
+  <!-- QR code stylisé -->
+  <g transform="translate(4, 4)">
+    <!-- Cadre extérieur -->
+    <rect x="0" y="0" width="24" height="24" rx="3" ry="3" fill="#121212" stroke="#2979FF" stroke-width="1"/>
+    
+    <!-- Éléments QR -->
+    <rect x="3" y="3" width="5" height="5" rx="1" ry="1" fill="#2979FF"/>
+    <rect x="16" y="3" width="5" height="5" rx="1" ry="1" fill="#2979FF"/>
+    <rect x="3" y="16" width="5" height="5" rx="1" ry="1" fill="#2979FF"/>
+    <rect x="10" y="10" width="4" height="4" rx="1" ry="1" fill="#2979FF"/>
+    
+    <!-- Chiffre 2 superposé -->
+    <text x="12" y="18" font-family="Arial, sans-serif" font-weight="bold" font-size="16" text-anchor="middle" fill="#FF6D00">
+      2
+    </text>
+  </g>
+  
+  <!-- Léger effet de lueur -->
+  <circle cx="16" cy="16" r="14" fill="#2979FF" opacity="0.05"/>
+</svg>

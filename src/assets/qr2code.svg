@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 350">
+  <!-- Fond très sombre avec gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A0A0A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1A1A1A;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Filtre de lueur pour le "2" -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <!-- Motif de grille tech en arrière-plan -->
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#222222" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  
+  <!-- Arrière-plan avec gradient -->
+  <rect width="500" height="350" fill="url(#bgGradient)"/>
+  
+  <!-- Grille tech en arrière-plan -->
+  <rect width="500" height="350" fill="url(#grid)" opacity="0.3"/>
+  
+  <!-- Effet subtil de vignette -->
+  <radialGradient id="vignette" cx="50%" cy="50%" r="70%" fx="50%" fy="50%">
+    <stop offset="0%" style="stop-color:#000000;stop-opacity:0" />
+    <stop offset="100%" style="stop-color:#000000;stop-opacity:0.7" />
+  </radialGradient>
+  <rect width="500" height="350" fill="url(#vignette)" />
+  
+  <!-- Partie gauche - QR code transformé et "2" -->
+  <g transform="translate(50, 105)">
+    <!-- Éléments QR entrants avec effet brillant -->
+    <rect x="10" y="40" width="20" height="20" fill="#2979FF" opacity="0.7">
+      <animate attributeName="x" from="-30" to="10" dur="0.5s" begin="0s" fill="freeze"/>
+      <animate attributeName="opacity" from="0" to="0.7" dur="0.5s" begin="0s" fill="freeze"/>
+    </rect>
+    <rect x="10" y="70" width="20" height="20" fill="#2979FF" opacity="0.8">
+      <animate attributeName="x" from="-20" to="10" dur="0.6s" begin="0.1s" fill="freeze"/>
+      <animate attributeName="opacity" from="0" to="0.8" dur="0.6s" begin="0.1s" fill="freeze"/>
+    </rect>
+    <rect x="10" y="100" width="20" height="20" fill="#2979FF" opacity="0.9">
+      <animate attributeName="x" from="-10" to="10" dur="0.7s" begin="0.2s" fill="freeze"/>
+      <animate attributeName="opacity" from="0" to="0.9" dur="0.7s" begin="0.2s" fill="freeze"/>
+    </rect>
+    
+    <!-- QR code stylisé central -->
+    <g>
+      <!-- Lueur d'arrière-plan -->
+      <rect x="38" y="38" width="124" height="124" rx="12" ry="12" fill="#2979FF" opacity="0.1"/>
+      
+      <!-- Cadre extérieur -->
+      <rect x="40" y="40" width="120" height="120" rx="10" ry="10" fill="#121212" stroke="#2979FF" stroke-width="2"/>
+      
+      <!-- Éléments QR -->
+      <rect x="55" y="55" width="25" height="25" rx="3" ry="3" fill="#2979FF"/>
+      <rect x="120" y="55" width="25" height="25" rx="3" ry="3" fill="#2979FF"/>
+      <rect x="55" y="120" width="25" height="25" rx="3" ry="3" fill="#2979FF"/>
+      <rect x="90" y="90" width="20" height="20" rx="3" ry="3" fill="#2979FF"/>
+    </g>
+    
+    <!-- Chiffre 2 superposé avec animation et lueur -->
+    <text x="100" y="115" font-family="Arial, sans-serif" font-weight="bold" font-size="80" text-anchor="middle" fill="#FF6D00" filter="url(#glow)" opacity="1">
+      2
+      <animate attributeName="opacity" from="0" to="1" dur="1s" begin="0.5s" fill="freeze"/>
+      <animate attributeName="font-size" from="0" to="80" dur="0.8s" begin="0.5s" fill="freeze"/>
+    </text>
+    
+    <!-- QR code sortant transformé - style futuriste -->
+    <rect x="170" y="60" width="30" height="10" fill="#2979FF" opacity="0.7" rx="2" ry="2">
+      <animate attributeName="x" from="140" to="170" dur="0.5s" begin="0.7s" fill="freeze"/>
+      <animate attributeName="opacity" from="0" to="0.7" dur="0.5s" begin="0.7s" fill="freeze"/>
+    </rect>
+    <rect x="170" y="80" width="30" height="10" fill="#2979FF" opacity="0.8" rx="2" ry="2">
+      <animate attributeName="x" from="140" to="170" dur="0.6s" begin="0.8s" fill="freeze"/>
+      <animate attributeName="opacity" from="0" to="0.8" dur="0.6s" begin="0.8s" fill="freeze"/>
+    </rect>
+    <rect x="170" y="100" width="30" height="10" fill="#2979FF" opacity="0.9" rx="2" ry="2">
+      <animate attributeName="x" from="140" to="170" dur="0.7s" begin="0.9s" fill="freeze"/>
+      <animate attributeName="opacity" from="0" to="0.9" dur="0.7s" begin="0.9s" fill="freeze"/>
+    </rect>
+    <rect x="170" y="120" width="30" height="10" fill="#2979FF" opacity="1" rx="2" ry="2">
+      <animate attributeName="x" from="140" to="170" dur="0.8s" begin="1s" fill="freeze"/>
+      <animate attributeName="opacity" from="0" to="1" dur="0.8s" begin="1s" fill="freeze"/>
+    </rect>
+  </g>
+  
+  <!-- Léger effet de lueur radiale autour du QR code -->
+  <circle cx="100" cy="170" r="100" fill="#2979FF" opacity="0.05"/>
+  
+  <!-- Texte Qr2code avec style tech et effet de contour lumineux -->
+  <g transform="translate(250, 140)">
+    <!-- Lueur subtile derrière le texte -->
+    <rect x="-5" y="-40" width="210" height="50" rx="5" ry="5" fill="#2979FF" opacity="0.03"/>
+    
+    <text font-family="Arial, sans-serif" font-weight="900" font-size="48" letter-spacing="-1">
+      <tspan x="0" y="0" fill="#FAFAFA">Qr</tspan>
+      <tspan x="62" y="0" fill="#FF6D00" filter="url(#glow)">2</tspan>
+      <tspan x="88" y="0" fill="#FAFAFA">code</tspan>
+    </text>
+  </g>
+  
+  <!-- Ligne d'accentuation avec effet de lueur -->
+  <line x1="250" y1="160" x2="430" y2="160" stroke="#333333" stroke-width="1"/>
+  <line x1="250" y1="161" x2="430" y2="161" stroke="#2979FF" stroke-width="0.5" opacity="0.3"/>
+  
+  <!-- Tagline avec effet lumineux - MAINTENANT COMPLÈTEMENT VISIBLE -->
+  <text x="340" y="190" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#2979FF" opacity="0.8">Transform • Share • Connect</text>
+  
+  <!-- Éléments décoratifs tech - circuits avec pulsation - REPOSITIONNÉS PLUS BAS -->
+  <g opacity="0.6">
+    <path d="M 250 240 L 250 220 L 280 220 L 280 240" stroke="#2979FF" stroke-width="1" fill="none">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="4s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 290 240 L 290 220 L 320 220 L 320 240" stroke="#2979FF" stroke-width="1" fill="none">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 330 240 L 330 220 L 360 220 L 360 240" stroke="#2979FF" stroke-width="1" fill="none">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="6s" repeatCount="indefinite"/>
+    </path>
+    
+    <circle cx="250" cy="220" r="3" fill="#2979FF">
+      <animate attributeName="r" values="2;3;2" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="280" cy="220" r="3" fill="#2979FF">
+      <animate attributeName="r" values="2;3;2" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="290" cy="220" r="3" fill="#2979FF">
+      <animate attributeName="r" values="2;3;2" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="320" cy="220" r="3" fill="#2979FF">
+      <animate attributeName="r" values="2;3;2" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="330" cy="220" r="3" fill="#2979FF">
+      <animate attributeName="r" values="2;3;2" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="360" cy="220" r="3" fill="#2979FF">
+      <animate attributeName="r" values="2;3;2" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Version et copyright - placés en bas -->
+  <text x="250" y="310" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666666">Qr2code v1.0</text>
+</svg>

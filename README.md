@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  Une application moderne de génération de QR codes développée avec React
+  A modern QR code generator application built with React
 </p>
 
 <p align="center">
@@ -14,120 +14,124 @@
   <img src="https://img.shields.io/badge/react-18.2.0-61DAFB" alt="React">
 </p>
 
-## 📋 À propos
+## 📋 About
 
-Qr2code est une application web moderne qui vous permet de créer facilement des QR codes personnalisés. Conçue avec une architecture React optimisée et une interface utilisateur intuitive en mode sombre, cette application offre des fonctionnalités avancées de personnalisation tout en restant simple d'utilisation.
+Qr2code is a modern web application that makes it easy to create custom QR codes. Built with an optimized React architecture and a sleek dark-mode interface, this app delivers advanced customization options while remaining user-friendly.
 
-## ✨ Fonctionnalités
+## ✨ Features
 
-- ✅ Génération de QR codes à partir de texte, URLs, ou données structurées
-- ✅ Personnalisation des couleurs (premier plan et arrière-plan)
-- ✅ Ajustement de la taille et de la précision des QR codes
-- ✅ Téléchargement des QR codes au format PNG, SVG et PDF
-- ✅ Interface utilisateur moderne avec support du mode sombre
-- ✅ Prévisualisation en temps réel
-- ✅ Sauvegarde des QR codes récemment générés
+- ✅ Generate QR codes from text, URLs, or structured data
+- ✅ Customize foreground and background colors
+- ✅ Adjust QR code size and error correction level
+- ✅ Download QR codes as PNG, SVG, or PDF
+- ✅ Modern user interface with dark mode support
+- ✅ Real-time preview
+- ✅ Save recently generated QR codes
 
-## 🚀 Démarrage rapide
+## 🚀 Quick Start
 
-### Prérequis
+### Prerequisites
 
-- Node.js (version 14.0.0 ou supérieure)
-- npm ou yarn
+- Node.js (version 14.0.0 or higher)
+- npm or yarn
 
 ### Installation
 
-1. Clonez le dépôt
+1. Clone the repository
 ```bash
-git clone https://github.com/votre-username/qr2code.git
+git clone https://github.com/your-username/qr2code.git
 cd qr2code
 ```
 
-2. Installez les dépendances
+2. Install dependencies
 ```bash
 npm install
-# ou
+# or
 yarn install
 ```
 
-3. Lancez l'application en mode développement
+3. Start the development server
 ```bash
 npm run dev
-# ou
+# or
 yarn dev
 ```
 
-4. Ouvrez votre navigateur à l'adresse [http://localhost:5173](http://localhost:5173)
+4. Open your browser to [http://localhost:5173](http://localhost:5173)
 
-## 🏗️ Architecture du projet
+## 🏗️ Project Structure
 
 ```
 qr2code/
-├── public/                   # Fichiers statiques
-│   ├── index.html            # Template HTML principal
+├── public/                   # Static files
+│   ├── index.html            # Main HTML template
 │   └── favicon.svg           # Favicon
-├── src/                      # Code source
-│   ├── assets/               # Images, polices, etc.
-│   │   └── logo.svg          # Logo Qr2code
-│   ├── components/           # Composants réutilisables
-│   │   ├── common/           # Composants génériques
-│   │   └── layout/           # Composants de mise en page
-│   ├── features/             # Fonctionnalités principales
-│   │   └── qrcode/           # Fonctionnalité QR code
-│   │       ├── components/   # Composants spécifiques
-│   │       ├── hooks/        # Hooks personnalisés
-│   │       └── utils/        # Fonctions utilitaires
-│   ├── hooks/                # Hooks réutilisables
-│   ├── utils/                # Fonctions utilitaires génériques
-│   ├── App.jsx               # Composant racine
-│   └── index.jsx             # Point d'entrée
-├── .gitignore                # Fichiers ignorés par Git
-├── package.json              # Dépendances et scripts
-├── README.md                 # Documentation du projet
-└── tailwind.config.js        # Configuration Tailwind
+├── src/                      # Source code
+│   ├── assets/               # Images, fonts, etc.
+│   │   └── logo.svg          # Qr2code logo
+│   ├── components/           # Reusable components
+│   │   ├── common/           # Generic components
+│   │   └── layout/           # Layout components
+│   ├── features/             # Core features
+│   │   └── qrcode/           # QR code functionality
+│   │       ├── components/   # Feature-specific components
+│   │       ├── hooks/        # Custom hooks
+│   │       └── utils/        # Utility functions
+│   ├── hooks/                # Shared hooks
+│   ├── utils/                # Generic utility functions
+│   ├── App.jsx               # Root component
+│   └── index.jsx             # Entry point
+├── .gitignore                # Git ignore rules
+├── package.json              # Dependencies and scripts
+├── README.md                 # Project documentation
+└── tailwind.config.js        # Tailwind CSS configuration
 ```
 
-## 🧩 Composants principaux
+## 🧩 Main Components
 
 ### QRCodeGenerator
-Le composant principal qui coordonne la génération de QR codes.
+
+The main component that orchestrates QR code generation.
 
 ### QRCodeForm
-Gère les entrées utilisateur et les paramètres de personnalisation.
+
+Handles user inputs and customization settings.
 
 ### QRCodePreview
-Affiche le QR code généré avec des options de téléchargement.
 
-## 🛠️ Développé avec
+Displays the generated QR code with download options.
 
-- [React](https://reactjs.org/) - Bibliothèque JavaScript pour construire l'interface utilisateur
-- [Vite](https://vitejs.dev/) - Outil de build ultra-rapide
-- [Tailwind CSS](https://tailwindcss.com/) - Framework CSS utilitaire
-- [Google Charts API](https://developers.google.com/chart/infographics/docs/qr_codes) - Pour la génération des QR codes
+## 🛠️ Built With
 
-## 📝 Guide de contribution
+- [React](https://reactjs.org/) - JavaScript library for building user interfaces
+- [Vite](https://vitejs.dev/) - Fast build tool
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [Google Charts API](https://developers.google.com/chart/infographics/docs/qr_codes) - For QR code generation
 
-1. Fork le projet
-2. Créez votre branche de fonctionnalité (`git checkout -b feature/amazing-feature`)
-3. Committez vos changements (`git commit -m 'Add some amazing feature'`)
-4. Push vers la branche (`git push origin feature/amazing-feature`)
-5. Ouvrez une Pull Request
+## 📝 Contribution Guide
 
-## 📄 Licence
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-Distribué sous licence MIT. Voir `LICENSE` pour plus d'informations.
+## 📄 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 📊 Roadmap
 
-- [ ] Support des QR codes pour vCards et autres formats structurés
-- [ ] Ajout de logos personnalisés au centre des QR codes
-- [ ] Styles de QR codes avec formes arrondies
-- [ ] Export vers plus de formats (JPEG, WebP)
-- [ ] Support de QR codes dynamiques avec statistiques de scan
-- [ ] Mode hors-ligne complet avec PWA
+- [ ] Support QR codes for vCards and other structured formats
+- [ ] Add custom logos to the center of QR codes
+- [ ] QR code styles with rounded shapes
+- [ ] Export to more formats (JPEG, WebP)
+- [ ] Support dynamic QR codes with scan analytics
+- [ ] Full offline mode with PWA
 
 ## 📬 Contact
 
-Créé par [Votre Nom] - [@votre-twitter](https://twitter.com/votre-twitter) - email@example.com
+Created by [Your Name] - [@your-twitter](https://twitter.com/your-twitter) - email@example.com
 
-Lien du projet: [https://github.com/votre-username/qr2code](https://github.com/votre-username/qr2code)
+Project Link: [https://github.com/your-username/qr2code](https://github.com/your-username/qr2code)
+

@@ -131,7 +131,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 📬 Contact
 
-Created by [Your Name] - [@your-twitter](https://twitter.com/your-twitter) - email@example.com
+Created by XyDisorder - xydisorder@gmail.com
 
-Project Link: [https://github.com/your-username/qr2code](https://github.com/your-username/qr2code)
+Project Link: [https://github.com/XyDisorder/qr2code](https://github.com/XyDisorder/qr2code)
 

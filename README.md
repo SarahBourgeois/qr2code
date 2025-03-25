@@ -77,7 +77,6 @@ qr2code/
 │   │   ├── common/           # Generic components
 │   │   └── layout/           # Layout components
 │   ├── features/             # Core features
-│   │   └── qrcode/           # QR code functionality
 │   │       ├── components/   # Feature-specific components
 │   │       ├── hooks/        # Custom hooks
 │   │       └── utils/        # Utility functions

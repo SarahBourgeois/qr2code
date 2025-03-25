@@ -18,6 +18,8 @@
 
 Qr2code is a modern web application that makes it easy to create custom QR codes. Built with an optimized React architecture and a sleek dark-mode interface, this app delivers advanced customization options while remaining user-friendly.
 
+Website : https://qr2code.netlify.app/
+
 ## ✨ Features
 
 - ✅ Generate QR codes from text, URLs, or structured data

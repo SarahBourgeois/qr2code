@@ -28,8 +28,8 @@ function SettingsCard() {
         onChange={e => setSize(+e.target.value)}
       />
      
-      <div className="grid grid-cols-2 gap-4">
-        <ColorPicker label="Background Color" value={bgColor} onChange={e => setBgColor(e.target.value)}/>
+     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+       <ColorPicker label="Background Color" value={bgColor} onChange={e => setBgColor(e.target.value)}/>
 
         <ColorPicker label="Foreground Color"  value={fgColor} onChange={e => setFgColor(e.target.value)}/>
       </div>

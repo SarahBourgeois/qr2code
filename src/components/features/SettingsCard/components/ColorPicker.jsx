@@ -10,7 +10,7 @@ export default function ColorPicker({ label, value, onChange }) {
         {/* Carré couleur */}
         <input
           type="color"
-          value={value}
+          value={display}
           onChange={onChange} 
           className="w-10 h-10 p-0 border-0 rounded"
         />
@@ -19,7 +19,7 @@ export default function ColorPicker({ label, value, onChange }) {
         <input
           type="text"
           readOnly
-          value={value.toUpperCase()}
+          value={display.toUpperCase()}
           className="flex-1 bg-transparent text-white text-sm font-medium focus:outline-none"
         />
       </div>

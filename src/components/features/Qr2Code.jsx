@@ -1,20 +1,17 @@
 import React from "react";
 import SettingsCard from "./SettingsCard/SettingsCard";
+import PreviewCard from "./PreviewCard/PreviewCard";
 
 function Qr2Code() {
   return (
     <section className="container mx-auto px-4 mt-8">
-    <div className="flex flex-col md:flex-row gap-6">
-        {/* Colonne gauche = 50% */}
-      <div className="w-full md:w-1/2">
-        <SettingsCard />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <SettingsCard className="h-full flex flex-col justify-between" />
+        <PreviewCard className="h-full flex flex-col justify-between" />
       </div>
-        {/* Colonne droit = 50% */}
-      <div className="w-full md:w-1/2">
-      <SettingsCard />
-      </div>
-    </div>
-  </section>
+    </section>
+
+
   )
 }
 

@@ -1,8 +1,6 @@
 import React from "react";
-import { useState } from 'react'
 
-export default function RangeSlider({ label, min, max, defaultValue }) {
-  const [value, setValue] = useState(defaultValue)
+export default function RangeSlider({ label, min, max, value, onChange }) {
 
   return (
     <label className="block" > 
@@ -12,7 +10,7 @@ export default function RangeSlider({ label, min, max, defaultValue }) {
         min={min} 
         max={max} 
         value={value}
-        onChange={e => setValue(e.target.value)}
+        onChange={onChange}
         className="w-full"
       />
 

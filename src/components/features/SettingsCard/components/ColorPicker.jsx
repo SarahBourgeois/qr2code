@@ -1,7 +1,7 @@
-import { useState } from 'react'
+import React from "react"
 
-export default function ColorPicker({ label, defaultValue }) {
-  const [color, setColor] = useState(defaultValue)
+export default function ColorPicker({ label, value, onChange }) {
+  const display = value ?? defaultValue
 
   return (
     <label className="block">
@@ -10,8 +10,8 @@ export default function ColorPicker({ label, defaultValue }) {
         {/* Carré couleur */}
         <input
           type="color"
-          value={color}
-          onChange={e => setColor(e.target.value)}
+          value={value}
+          onChange={onChange} 
           className="w-10 h-10 p-0 border-0 rounded"
         />
 
@@ -19,7 +19,7 @@ export default function ColorPicker({ label, defaultValue }) {
         <input
           type="text"
           readOnly
-          value={color.toUpperCase()}
+          value={value.toUpperCase()}
           className="flex-1 bg-transparent text-white text-sm font-medium focus:outline-none"
         />
       </div>

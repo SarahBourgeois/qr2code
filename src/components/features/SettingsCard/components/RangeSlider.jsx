@@ -13,8 +13,6 @@ export default function RangeSlider({ label, min, max, value, onChange }) {
         onChange={onChange}
         className="w-full"
       />
-
- 
     </label>
   )
 }

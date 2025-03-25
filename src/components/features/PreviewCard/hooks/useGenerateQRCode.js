@@ -1,10 +1,9 @@
-import React from "react"
 import { useState, useEffect } from "react"
 import QRCode from "qrcode"
 
 export default function useGenerateQRCode({ text, size, fgColor, bgColor, format }) {
-  const [dataURL, setDataURL] = useState("")
-  const [svg, setSvg] = useState("")
+  const [qrCodeData, setQrCodeData] = useState("")
+  const [qrCodeFormat, setSvg] = useState("")
 
   useEffect(() => {
     if (!text) return
@@ -21,10 +20,10 @@ export default function useGenerateQRCode({ text, size, fgColor, bgColor, format
         .catch(console.error)
     } else {
       QRCode.toDataURL(text, options)
-        .then(setDataURL)
+        .then(setQrCodeData)
         .catch(console.error)
     }
   }, [text, size, fgColor, bgColor, format])
 
-  return { dataURL, svg }
+  return { qrCodeData, qrCodeFormat }
 }

@@ -14,7 +14,6 @@ function TextInput({ label, placeholder, onChange, value })  {
     />
   </label>
   )
-
 }
 
 export default TextInput;

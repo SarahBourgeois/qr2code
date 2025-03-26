@@ -14,7 +14,7 @@ export default function UploadLogo() {
 
   return (
     <div className="mt-6">
-      <h2 className="text-xl font-semibold text-blue-400 mb-3">Logo</h2>
+      <div className="text-s mb-2">Logo</div>
 
       {logoName ? (
         <div className="flex items-center space-x-3">

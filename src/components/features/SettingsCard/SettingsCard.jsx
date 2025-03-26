@@ -4,6 +4,7 @@ import RangeSlider from "./components/RangeSlider";
 import ColorPicker from "./components/ColorPicker";
 import { useQrSettings } from "../../../store/useQrSettings"
 import UploadLogo from "../UploadLogo/UploadLogo";
+import AdvancedOptions from "./components/AdvancedOptions/AdvancedOptions";
 
 
 function SettingsCard() {
@@ -36,6 +37,8 @@ function SettingsCard() {
       </div>
 
       <UploadLogo />
+
+      <AdvancedOptions />
 
     </div>
   )

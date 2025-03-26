@@ -1,17 +1,33 @@
-import React from 'react';
+import React from 'react'
+import { FaGithub } from 'react-icons/fa'
 
-
-
-function Footer() {
+export default function Footer() {
   return (
-<header className="bg-gray-900 text-white shadow-md">
-  <div className="container mx-auto flex items-center justify-between py-3 px-4 space-x-6">
-    <div className="flex items-center space-x-3">
-      <h1 className="text-lg uppercase font-medium tracking-wide whitespace-nowrap text-blue-400">Transform • Share • Connect</h1>
-    </div>
-  </div>
-</header>
-  );
-}
+    <footer className="bg-gray-900 text-white py-6">
+      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 px-4">
+        
+        {/* Gauche : marque & copyright */}
+        <p className="text-sm opacity-75">
+          © {new Date().getFullYear()} Qr2code — Tous droits réservés
+        </p>
 
-export default Footer;
+        {/* Centre : liens légaux */}
+        <nav className="flex flex-wrap gap-6 text-sm">
+        <a href="/mentions-legales" className="hover:underline">Mentions Légales</a>
+        <a href="/politique-confidentialite" className="hover:underline">Politique de Confidentialité</a>
+        </nav>
+
+        {/* Droite : GitHub */}
+        <a
+          href="https://github.com/XyDisorder/qr2code"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xl hover:text-blue-400 transition"
+          aria-label="Qr2code sur GitHub"
+        >
+          <FaGithub />
+        </a>
+      </div>
+    </footer>
+  )
+}

@@ -1,20 +1,21 @@
-
 import React from "react"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Layout from './components/layout/Layout.jsx';
-import Qr2Code from "./components/features/Qr2Code.jsx";
+import LegalMention from "./pages/LegalMention.jsx";
+import Home from "./pages/Home.jsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 
-function App() {
-
+export default function App() {
   return (
-    <Layout>
-      {/* Votre contenu principal ici */}
-      <div>
-        {
-          <Qr2Code />
-        }
-      </div>
-    </Layout>
-  );
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="mentions-legales" element={<LegalMention />} />
+          <Route path="politique-confidentialite" element={<PrivacyPolicy />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
-export default App;

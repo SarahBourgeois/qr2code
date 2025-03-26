@@ -1,6 +1,6 @@
 import React from "react";
-import SettingsCard from "./SettingsCard/SettingsCard";
-import PreviewCard from "./PreviewCard/PreviewCard";
+import SettingsCard from "../components/features/SettingsCard/SettingsCard";
+import PreviewCard from "../components/features/PreviewCard/PreviewCard";
 
 function Qr2Code() {
   return (

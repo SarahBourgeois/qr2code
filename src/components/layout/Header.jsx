@@ -1,8 +1,6 @@
 import React from 'react';
 import Logo from '../common/Logo/Logo'
 
-
-
 function Header() {
   return (
 <header className="bg-gray-900 text-white shadow-md">

@@ -11,17 +11,17 @@ function SettingsCard() {
 
   return (
     <div className="bg-gray-900 rounded-2xl shadow-lg p-6 space-y-6  flex flex-col  h-full">
-      <h2 className="text-2xl font-semibold text-blue-400">QR Code Parameters</h2>
+      <h2 className="text-2xl font-semibold text-blue-400">Paramètre du Qr Code</h2>
       
       <TextInput 
-        label={"Enter text or url"} 
-        placeholder={"https://example.com"} 
+        label={"Texte ou Url :"} 
+        placeholder={"https://exemple.com"} 
         value={text}  
         onChange={e => setText(e.target.value)}
         />
      
       <RangeSlider 
-        label="Size : " 
+        label="Taille : " 
         min={100} 
         max={1000} 
         value={size} 
@@ -29,9 +29,9 @@ function SettingsCard() {
       />
      
      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-       <ColorPicker label="Background Color" value={bgColor} onChange={e => setBgColor(e.target.value)}/>
+       <ColorPicker label="Couleur de fond" value={bgColor} onChange={e => setBgColor(e.target.value)}/>
 
-        <ColorPicker label="Foreground Color"  value={fgColor} onChange={e => setFgColor(e.target.value)}/>
+        <ColorPicker label="Couleur du motif"  value={fgColor} onChange={e => setFgColor(e.target.value)}/>
       </div>
 
     </div>

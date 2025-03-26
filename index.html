@@ -6,6 +6,15 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=%VITE_GOOGLE_ANALYTICS_ID%"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '%VITE_GOOGLE_ANALYTICS_ID%');
+    </script>
+
     <!-- SEO Tags -->
     <title>Qr2Code - Free Online QR Code Generator</title>
     <meta name="description" content="Create your custom QR codes for free. Download in PNG, SVG, and PDF formats. Simple and fast tool with no registration required." />

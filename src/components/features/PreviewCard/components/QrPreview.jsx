@@ -1,8 +1,10 @@
 import React from "react"
-
+import { useQrSettings } from "../../../../store/useQrSettings"
 
 export default function QRPreview({ qrCodeData, qrCodeFormat }) {
-  // Si aucune donnée n'est présente, retourne un placeholder
+  const { logoSrc } = useQrSettings()
+
+  // Placeholder when nothing to show
   if (!qrCodeData && !qrCodeFormat) {
     return (
       <div className="bg-gray-900 rounded-lg p-4 flex items-center justify-center flex-1 text-gray-500">
@@ -12,15 +14,14 @@ export default function QRPreview({ qrCodeData, qrCodeFormat }) {
   }
 
   return (
-    <div className="bg-gray-900 rounded-lg p-4 flex items-center justify-center flex-1">
+    <div className="bg-gray-900 rounded-lg p-4 flex items-center justify-center flex-1 relative">
       {qrCodeFormat ? (
         <div
           className="max-w-xs max-h-64 w-full h-full overflow-hidden flex items-center justify-center"
-          // Remplace les attributs width/height pour que le SVG prenne 100% de la taille du conteneur
           dangerouslySetInnerHTML={{
             __html: qrCodeFormat
               .replace(/width="[^"]+"/, 'width="100%"')
-              .replace(/height="[^"]+"/, 'height="100%"')
+              .replace(/height="[^"]+"/, 'height="100%"'),
           }}
         />
       ) : (
@@ -28,6 +29,21 @@ export default function QRPreview({ qrCodeData, qrCodeFormat }) {
           src={qrCodeData}
           alt="QR Code Preview"
           className="max-w-xs max-h-64 object-contain"
+        />
+      )}
+
+      {logoSrc && (
+        <img
+          src={logoSrc}
+          alt="Logo Overlay"
+          className="absolute"
+          style={{
+            width: "20%",
+            height: "20%",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+          }}
         />
       )}
     </div>

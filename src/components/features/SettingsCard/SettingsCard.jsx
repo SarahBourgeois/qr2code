@@ -3,6 +3,7 @@ import TextInput from "./components/TextInput";
 import RangeSlider from "./components/RangeSlider";
 import ColorPicker from "./components/ColorPicker";
 import { useQrSettings } from "../../../store/useQrSettings"
+import UploadLogo from "../UploadLogo/UploadLogo";
 
 
 function SettingsCard() {
@@ -33,6 +34,8 @@ function SettingsCard() {
 
         <ColorPicker label="Couleur du motif"  value={fgColor} onChange={e => setFgColor(e.target.value)}/>
       </div>
+
+      <UploadLogo />
 
     </div>
   )

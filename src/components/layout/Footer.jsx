@@ -6,18 +6,18 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white py-6">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 px-4">
         
-        {/* Gauche : marque & copyright */}
+        {/* Left : name + copyright */}
         <p className="text-sm opacity-75">
           © {new Date().getFullYear()} Qr2code — Tous droits réservés
         </p>
 
-        {/* Centre : liens légaux */}
+        {/* Center : legal  */}
         <nav className="flex flex-wrap gap-6 text-sm">
         <a href="/mentions-legales" className="hover:underline">Mentions Légales</a>
         <a href="/politique-confidentialite" className="hover:underline">Politique de Confidentialité</a>
         </nav>
 
-        {/* Droite : GitHub */}
+        {/* right : GitHub link*/}
         <a
           href="https://github.com/XyDisorder/qr2code"
           target="_blank"

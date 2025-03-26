@@ -1,3 +1,5 @@
 User-agent: *
 Allow: /
-Sitemap: https://qr2code.netlify.app/sitemap.xml
+
+Sitemap: https://www.qr2code.fr/sitemap.xml
+Host: www.qr2code.fr

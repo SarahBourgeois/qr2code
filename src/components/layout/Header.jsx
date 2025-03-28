@@ -7,7 +7,9 @@ function Header() {
   <div className="container mx-auto flex items-center justify-between py-3 px-4 space-x-6">
     <div className="flex items-center space-x-3">
       <Logo className="w-48 h-auto" />
-      <h1 className="text-2xl uppercase font-medium tracking-wide whitespace-nowrap text-blue-400">Transform • Share • Connect</h1>
+      <h1 className="text-2xl uppercase font-medium tracking-wide whitespace-nowrap text-blue-400 transition-all duration-500 hover:scale-105 hover:translate-y-[-5px] hover:text-blue-300">
+                  Transform • Share • Connect
+      </h1>
     </div>
   </div>
 </header>

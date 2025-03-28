@@ -1,10 +1,10 @@
 import React from "react";
 import TextInput from "./components/TextInput";
 import RangeSlider from "./components/RangeSlider";
-import ColorPicker from "./components/ColorPicker";
 import { useQrSettings } from "../../../store/useQrSettings"
 import UploadLogo from "../UploadLogo/UploadLogo";
 import AdvancedOptions from "./components/AdvancedOptions/AdvancedOptions";
+import ColorPicker from "../../common/ColorPicker";
 
 
 function SettingsCard() {
@@ -31,9 +31,14 @@ function SettingsCard() {
       />
      
      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-       <ColorPicker label="Couleur de fond" value={bgColor} onChange={e => setBgColor(e.target.value)}/>
+       <ColorPicker label="Couleur de fond" 
+                    value={bgColor} 
+                    onChange={e => setBgColor(e.target.value)}/>
 
-        <ColorPicker label="Couleur du motif"  value={fgColor} onChange={e => setFgColor(e.target.value)}/>
+        <ColorPicker label="Couleur du motif"  
+                    value={fgColor} 
+                    onChange={e => setFgColor(e.target.value)
+                    }/>
       </div>
 
       <UploadLogo />

@@ -13,6 +13,7 @@ export default function Footer() {
 
         {/* Center : legal  */}
         <nav className="flex flex-wrap gap-6 text-sm">
+        <a href="/" className="hover:underline">Home</a>
         <a href="/mentions-legales" className="hover:underline">Mentions Légales</a>
         <a href="/politique-confidentialite" className="hover:underline">Politique de Confidentialité</a>
         </nav>

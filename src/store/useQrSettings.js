@@ -10,6 +10,9 @@ export const useQrSettings = create((set) => ({
   cornerType: "square", 
   dotType: "square",
   errorLevel: "M",
+  cornerDotColor: "#000000",
+  cornerSquareColor: "#000000",
+
 
   setText: (text) => set({ text }),
   setSize: (size) => set({ size }),
@@ -19,6 +22,8 @@ export const useQrSettings = create((set) => ({
   setLogoName: (logoName) => set({logoName}),
   setCornerType: (cornerType) => set({cornerType}),
   setDotType: (dotType) => set({dotType}),
-  setErrorLevel: (errorLevel) => set({errorLevel})
+  setErrorLevel: (errorLevel) => set({errorLevel}),
+  setCornerDotColor: (cornerDotColor) => set({cornerDotColor}),
+  setCornerSquareColor: (cornerSquareColor) => set({cornerSquareColor})
 }))
 

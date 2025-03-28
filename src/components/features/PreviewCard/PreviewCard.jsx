@@ -19,13 +19,14 @@ export default function PreviewCard() {
     height: PREVIEW_SIZE,
     data: text,
     image: logoSrc,
-    dotsOptions: { color: fgColor, type: dotType },
+    dotsOptions: { color: fgColor, type: dotType},
     cornersSquareOptions: {color: cornerSquareColor,  type: cornerType },
     cornersDotOptions: { color: cornerDotColor, type: cornerType },
     backgroundOptions: { color: bgColor },
     imageOptions: { crossOrigin: "anonymous", margin: 5 },
     qrOptions: { errorCorrectionLevel: defaultErrorLevel }
   })).current
+
 
   useEffect(() => {
     qr.update({
@@ -42,6 +43,7 @@ export default function PreviewCard() {
     qr.append(qrRef.current)
   }, [text, fgColor, bgColor, logoSrc, dotType, cornerType, defaultErrorLevel, cornerSquareColor, cornerDotColor])
 
+
   const handleDownload = () => {
     const exporter = new QRCodeStyling({
       width: size,
@@ -49,13 +51,13 @@ export default function PreviewCard() {
       data: text,
       image: logoSrc,
       dotsOptions: { color: fgColor, type: dotType },
-      cornersSquareOptions: {color: cornerColor,  type: cornerType },
-      cornersDotOptions: { color: cornerColor, type: cornerType },
+      cornersSquareOptions: {color: cornerSquareColor,  type: cornerType },
+      cornersDotOptions: { color: cornerDotColor, type: cornerType },
       backgroundOptions: { color: bgColor },
       imageOptions: { crossOrigin: "anonymous", margin: 5 },
       qrOptions: { errorCorrectionLevel: defaultErrorLevel }
     })
-    exporter.download({ extension: format.toLowerCase() })
+    exporter.download({ name: "qr2code", extension: format.toLowerCase() })
   }
 
   return (

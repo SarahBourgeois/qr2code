@@ -23,10 +23,10 @@ Website : www.qr2code.fr
 ## ✨ Features
 
 - ✅ Generate QR codes from text, URLs, or structured data
-- ✅ Customize foreground and background colors
+- ✅ Customize foreground and background colors 
+- ✅ Add a logo at the center of the Qr Code
 - ✅ Adjust QR code size and error correction level
 - ✅ Download QR codes as PNG, SVG, or PDF
-- ✅ Modern user interface with dark mode support
 - ✅ Real-time preview
 - ✅ Save recently generated QR codes
 

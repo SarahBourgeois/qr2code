@@ -6,10 +6,16 @@ export default function LevelSelector() {
   const { errorLevel, setErrorLevel } = useQrSettings()
   return (
     <div>
-      <h3 className="text-sm font-semibold mb-2">Niveau d'erreur</h3>
+      <h3 className="text-sm font-semibold mb-2">Niveau</h3>
       <div className="flex gap-2">
         {levels.map(lvl => (
-          <button key={lvl} onClick={() => setErrorLevel(lvl)} className={`px-3 py-1 rounded ${errorLevel===lvl ? 'bg-blue-500 text-white' : 'bg-gray-700 text-gray-300'}`}>{lvl}</button>
+          <button 
+          key={lvl} 
+          onClick={() => setErrorLevel(lvl)} 
+          className={`px-3 py-1 rounded 
+            ${errorLevel===lvl ? 'bg-blue-500 text-white' : 'bg-gray-700 text-gray-300'}`}>
+              {lvl}
+          </button>
         ))}
       </div>
     </div>

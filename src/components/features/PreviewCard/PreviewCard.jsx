@@ -5,7 +5,10 @@ import QrFormatSelector from "./components/QrFormatSelector"
 import { useQrSettings } from "../../../store/useQrSettings"
 
 export default function PreviewCard() {
-  const { text, size, fgColor, bgColor, logoSrc, frameSrc, dotType, cornerType, errorLevel } = useQrSettings()
+  const { text, size, fgColor, bgColor, 
+    logoSrc, frameSrc, dotType, 
+    cornerType, errorLevel, cornerDotColor, cornerSquareColor } = useQrSettings()
+  
   const [format, setFormat] = useState("PNG")
   const qrRef = useRef(null)
   const PREVIEW_SIZE = 300
@@ -17,8 +20,8 @@ export default function PreviewCard() {
     data: text,
     image: logoSrc,
     dotsOptions: { color: fgColor, type: dotType },
-    cornersSquareOptions: { type: cornerType },
-    cornersDotOptions: { type: cornerType },
+    cornersSquareOptions: {color: cornerSquareColor,  type: cornerType },
+    cornersDotOptions: { color: cornerDotColor, type: cornerType },
     backgroundOptions: { color: bgColor },
     imageOptions: { crossOrigin: "anonymous", margin: 5 },
     qrOptions: { errorCorrectionLevel: defaultErrorLevel }
@@ -30,14 +33,14 @@ export default function PreviewCard() {
       width: PREVIEW_SIZE,
       height: PREVIEW_SIZE,
       dotsOptions: { color: fgColor, type: dotType },
-      cornersSquareOptions: { type: cornerType },
-      cornersDotOptions: { type: cornerType },
+      cornersSquareOptions: {color: cornerSquareColor,  type: cornerType },
+      cornersDotOptions: { color: cornerDotColor, type: cornerType },
       backgroundOptions: { color: bgColor },
       image: logoSrc,
       qrOptions: { errorCorrectionLevel: defaultErrorLevel }
     })
     qr.append(qrRef.current)
-  }, [text, fgColor, bgColor, logoSrc, dotType, cornerType, defaultErrorLevel])
+  }, [text, fgColor, bgColor, logoSrc, dotType, cornerType, defaultErrorLevel, cornerSquareColor, cornerDotColor])
 
   const handleDownload = () => {
     const exporter = new QRCodeStyling({
@@ -46,8 +49,8 @@ export default function PreviewCard() {
       data: text,
       image: logoSrc,
       dotsOptions: { color: fgColor, type: dotType },
-      cornersSquareOptions: { type: cornerType },
-      cornersDotOptions: { type: cornerType },
+      cornersSquareOptions: {color: cornerColor,  type: cornerType },
+      cornersDotOptions: { color: cornerColor, type: cornerType },
       backgroundOptions: { color: bgColor },
       imageOptions: { crossOrigin: "anonymous", margin: 5 },
       qrOptions: { errorCorrectionLevel: defaultErrorLevel }

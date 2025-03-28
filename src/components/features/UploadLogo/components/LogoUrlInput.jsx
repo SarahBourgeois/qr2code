@@ -5,19 +5,15 @@ export default function LogoUrlInput() {
   const { logoSrc, setLogoSrc, setLogoName } = useQrSettings()
   const [error, setError] = useState("")
   
-  // Vérifier l'URL quand elle change
   useEffect(() => {
-    // Ignorer si vide ou data:
     if (!logoSrc || logoSrc.startsWith("data:")) {
       setError("");
       return;
     }
     
-    // Vérifier si c'est une URL valide
     try {
       new URL(logoSrc);
       
-      // Tester si l'image est accessible et valide
       const img = new Image();
       img.onload = () => setError("");
       img.onerror = () => setError("URL non valide");
@@ -31,7 +27,6 @@ export default function LogoUrlInput() {
   
   return (
     <>
-<>
   <input
     type="text"
     placeholder="Logo URL"
@@ -55,7 +50,5 @@ export default function LogoUrlInput() {
     </p>
   )}
 </>
-
-    </>
   )
 }

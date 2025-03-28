@@ -1,6 +1,6 @@
 import React from "react"
 
-const FORMATS = ["PNG", "SVG", "PDF"]
+const FORMATS = ["png", "jpeg", "svg", "webp", "pdf" ]
 
 export default function QrFormatSelector({ selected = "PNG", onSelect }) {
   return (

@@ -5,8 +5,8 @@ export default function PrivacyPolicy() {
     <main className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-6">Politique de Confidentialité</h1>
       <p className="mb-4">
-        Qr2code ne collecte aucune donnée personnelle identifiable. Aucune information ne
-        est stockée ou partagée. Le service se limite à générer et télécharger des QR codes
+        Qr2code ne collecte aucune donnée personnelle identifiable. Aucune information 
+        n'est stockée ou partagée. Le service se limite à générer et télécharger des QR codes
         directement dans votre navigateur.
       </p>
       <h2 className="text-2xl font-semibold mt-6 mb-2">Cookies</h2>

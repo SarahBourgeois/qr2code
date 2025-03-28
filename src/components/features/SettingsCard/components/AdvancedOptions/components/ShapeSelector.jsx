@@ -1,7 +1,8 @@
 import React from 'react'
 import { useQrSettings } from '../../../../../../store/useQrSettings'
 
-const shapes = ['square','dots','rounded','extra-rounded']
+const shapes = ['rounded', 'dots', 'classy', 'classy-rounded', 'square', 'extra-rounded'
+]
 export default function ShapeSelector() {
   const { dotType, setDotType } = useQrSettings()
   return (

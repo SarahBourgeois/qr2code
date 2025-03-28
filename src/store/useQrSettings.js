@@ -8,11 +8,10 @@ export const useQrSettings = create((set) => ({
   logoSrc: "",
   logoName: "",
   cornerType: "square", 
-  dotType: "square",
-  errorLevel: "M",
+  dotType: "classy",
+  errorLevel: "H",
   cornerDotColor: "#000000",
   cornerSquareColor: "#000000",
-
 
   setText: (text) => set({ text }),
   setSize: (size) => set({ size }),

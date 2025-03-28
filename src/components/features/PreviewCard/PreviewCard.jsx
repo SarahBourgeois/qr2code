@@ -9,7 +9,7 @@ export default function PreviewCard() {
     logoSrc, frameSrc, dotType, 
     cornerType, errorLevel, cornerDotColor, cornerSquareColor } = useQrSettings()
   
-  const [format, setFormat] = useState("PNG")
+  const [format, setFormat] = useState("png")
   const qrRef = useRef(null)
   const PREVIEW_SIZE = 300
   const defaultErrorLevel = errorLevel || "H"

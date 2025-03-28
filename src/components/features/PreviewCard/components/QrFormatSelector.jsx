@@ -2,7 +2,7 @@ import React from "react"
 
 const FORMATS = ["png", "jpeg", "svg", "webp", "pdf" ]
 
-export default function QrFormatSelector({ selected = "PNG", onSelect }) {
+export default function QrFormatSelector({ selected = "png", onSelect }) {
   return (
     <div className="flex justify-center gap-4 mt-4">
       {FORMATS.map(fmt => (
